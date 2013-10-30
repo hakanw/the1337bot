@@ -54,4 +54,4 @@ message = random.choice(["13.37", "13.37!", "1337", "13.37", "1337!"])
 
 print "Tweeting"
 if not test:
-    api.update_stats(message)
+    api.update_status(message)
