@@ -11,6 +11,12 @@ import datetime
 import tweepy
 import random
 
+required_env_vars = ("CONSUMER_KEY", "CONSUMER_SECRET", "ACCESS_TOKEN_KEY", "ACCESS_TOKEN_SECRET")
+for var in required_env_vars:
+    if not var in os.environ:
+        print "These variables must be set in your environment, with the authentication info from your registered twitter app, in order for the script to access the API: \n", "\n".join(required_env_vars)
+        sys.exit(1)
+
 test = "test" in sys.argv
 
 # only run about once every day
